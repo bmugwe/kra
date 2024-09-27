@@ -44,7 +44,7 @@ def getKRA(tinID):
 def createArray(face):
     pd_base = []
     pd_headers = []
-    if(face.get("base",'') != ''):
+    if(face.get("base")):
         base = face['base']
         for i in base:
             pd_base.append(base[i])
