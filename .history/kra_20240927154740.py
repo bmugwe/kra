@@ -5,7 +5,7 @@ import pandas as pd
 
 
 url = "https://etims.kra.go.ke/main/signup/getItaxData"
-custom_headers = ['ebmTyCd', 'modrId', 'modrNm', 'modDt', 'tin', 'taxpr_nm', 'in_itax', 'taxpr_stts_cd', 'taxpr_ty_cd', 'bsns_actv', 'prvnc_no', 'dstrt_no', 'sctr_no', 'loc_desc', 'tel_no', 'email', 'sync_dt', 'vat_ty_cd', 'nid', 'taxpr_no', 'bsns_yn', 'remarks', 'regr_id', 'regr_nm', 'reg_dt', 'tso_id', 'ismri']
+custome_headers = ['ebmTyCd', 'modrId', 'modrNm', 'modDt', 'tin', 'taxpr_nm', 'in_itax', 'taxpr_stts_cd', 'taxpr_ty_cd', 'bsns_actv', 'prvnc_no', 'dstrt_no', 'sctr_no', 'loc_desc', 'tel_no', 'email', 'sync_dt', 'vat_ty_cd', 'nid', 'taxpr_no', 'bsns_yn', 'remarks', 'regr_id', 'regr_nm', 'reg_dt', 'tso_id', 'ismri']
 
 
 
@@ -51,7 +51,7 @@ def createArray(face):
             pd_headers.append(i)
     
             
-    print(pd_base)
+    print(pd_headers)
     return pd_base
 
 All_data = []
@@ -66,6 +66,6 @@ for pin in read_data['PIN_NUMBER']:
     All_data.append(array_data)   
     
     break
-pd.DataFrame(All_data).to_csv("output/kra.csv", header=custom_headers)
+pd.DataFrame(All_data).to_csv("kra/output/kra.csv", header=custom_headers)
 
 

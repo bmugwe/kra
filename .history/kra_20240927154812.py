@@ -51,7 +51,7 @@ def createArray(face):
             pd_headers.append(i)
     
             
-    print(pd_base)
+    print(pd_headers)
     return pd_base
 
 All_data = []
